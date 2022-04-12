@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <img src="./images/logo.svg" alt="" class="logo">
+        <div class="navbarContainer">
+            <div class="navbar">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#store">Store</a>
+            </div>
+            <div class="info">
+                <div class="contact icon">
+                    <i class="fa fa-phone"></i> + 123 456 789
+                </div>
+                <div class="basket" id="basket" onclick="openBasket()">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span id="itemsCount">0</span> items - $<span id="itemsTotalPrice">0</span>
+                </div>
+            </div>
+        </div>
+        <span class="collapseMenuIcon" onclick="miniMenu()">
+            <i class="fa fa-bars"></i>
+        </span>
+    </div>
+    <section class="home">
+        <div class="basketContainer">
+            <div class="basketItems">
+            </div>
+            <div class="total">
+                <span>Total</span>
+                <span id="totalPriceBasket">$15</span>
+            </div>
+            <div class="basketButtons">
+                <div class="button">CLEAR CART</div>
+                <div class="button button-pink">CHECKOUT</div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="whiteText title">Welcome To <span class="titleStar font-56">Grandma's</span>
+            </div>
+            <div class="button" style="font-size: x-large;">EXPLORE</div>
+        </div>
+    </section>
+    <section class="about">
+        <div class="about-content">
+            <div class="title">About <span class="titleStar font-56">Us</span>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aliquam voluptas beatae vitae expedita consectetur nesciunt quia deserunt asperiores facere fuga dicta fugiat corrupti et omnis porro at dolorum! Ad!</p>
+            <div class="button">EXPLORE</div>
+        </div>
+        <div class="box">
+            <img src="./images/sweets-1.jpeg" alt="">
+        </div>
+    </section>
+    <section class="store">
+        <div class="title">Our <span class="titleStar font-56">Store</span>
+        </div>
+        <div class="categories">
+            <div class="button">All</div>
+            <div class="button">Cakes</div>
+            <div class="button">Cupcakes</div>
+            <div class="button">Sweets</div>
+            <div class="button">Doughnuts</div>
+        </div>
+        <div class="searchbox">
+            <span><i class="fa fa-search"></i></span>
+            <input type="text" placeholder="items">
+        </div>
+        <div class="items">
+            <!-- <div class="item">
+                <div class="img-container">
+                    <img src="./images/cake-2.jpeg" alt="">
+                    <span><i class="fa fa-shopping-cart"></i></span>
+                </div>
+                <div class="item-content">
+                    <span>Sweet item</span> <span>$0</span>
+                </div>
+            </div> -->
+        </div>
+    </section>
+</body>
+
+</html>
