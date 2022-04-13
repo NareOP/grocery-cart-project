@@ -11,6 +11,8 @@ body {
     --mainBlack: #000;
     --yellowTrans: #f9e49480;
     --mainGrey: #eeeeee;
+    --borderColor: #ffffff1F;
+    --whiteTransparent: #ffffff80)
 }
 
 .header {
@@ -218,6 +220,10 @@ section.store {
     margin-bottom: 1rem;
 }
 
+.x-large {
+    font-size: x-large;
+}
+
 .searchbox {
     width: 40%;
     height: 2.5rem;
@@ -253,9 +259,9 @@ section.store {
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color: var(--mainWhite);
     background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, .125);
+    border: 1px solid var(--borderColor);
     border-radius: .25rem;
     overflow: hidden;
     margin: 1rem;
@@ -323,7 +329,7 @@ section.store {
     align-items: start;
     justify-content: center;
     padding: 2rem 1.25rem;
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--whiteTransparent);
     transition: all 0.7s ease-in-out;
 }
 
@@ -401,7 +407,7 @@ section.store {
         left: 0;
         top: 5rem;
         z-index: 33;
-        background: #fff;
+        background: var(--mainWhite);
         display: flex;
         width: 100%;
         overflow: hidden;
