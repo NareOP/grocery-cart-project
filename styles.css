@@ -1,0 +1,433 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Kaushan Script", cursive;
+}
+
+:root {
+    --pink: #ef7998;
+    --mainYellow: #f9e494;
+    --mainWhite: #fff;
+    --mainBlack: #000;
+    --yellowTrans: #f9e49480;
+    --mainGrey: #eeeeee;
+    --borderColor: #ffffff1F;
+    --whiteTransparent: #ffffff80)
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 2rem;
+}
+
+.navbar {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    left: 6.75rem;
+    top: 2rem;
+    height: fit-content;
+    justify-content: center;
+    width: 50%;
+    background: transparent;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 1rem;
+    padding-left: 2.75rem;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.info div {
+    margin-left: 2rem;
+    margin-right: 1.25rem;
+}
+
+.navbar a {
+    color: var(--pink);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.navbar a:hover {
+    color: var(--mainBlack);
+}
+
+.font-56 {
+    font-size: 4rem;
+}
+
+.basket {
+    border: 0.1rem solid var(--mainBlack);
+    color: var(--mainBlack);
+    border-radius: 0.25rem;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+}
+
+.basket:hover {
+    color: var(--mainWhite);
+    background-color: var(--pink);
+    border-color: var(--pink);
+}
+
+.button {
+    border: 0.1rem solid var(--mainBlack);
+    color: var(--mainBlack);
+    border-radius: 0.25rem;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    width: fit-content;
+    transition: 0.3s;
+    font-size: medium;
+    margin: 1.25rem 0;
+    background: transparent;
+}
+
+.button:hover {
+    color: var(--pink);
+    background-color: var(--mainBlack);
+    border-color: var(--mainBlack);
+}
+
+.button-pink {
+    border: 0.1rem solid var(--pink);
+    color: var(--pink);
+    background-color: transparent;
+    border-color: var(--pink);
+}
+
+.button-pink:hover {
+    color: var(--mainBlack);
+    background-color: var(--pink);
+    border-color: var(--pink);
+}
+
+.collapseMenuIcon {
+    display: none;
+}
+
+.home {
+    background-image: url("images/headerBcg.jpeg");
+    min-height: 40rem;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    background-color: var(--yellowTrans);
+    height: 100%;
+    width: 100%;
+}
+
+.content {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.whiteText {
+    color: var(--mainWhite)
+}
+
+.titleStar {
+    font-size: larger;
+    color: var(--pink);
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 5% 0 5% 0;
+}
+
+.about-content {
+    width: 28rem;
+    margin: 3rem 0;
+}
+
+.about-content p {
+    width: 75%;
+}
+
+.box {
+    width: 24rem;
+}
+
+.box img {
+    width: 100%;
+}
+
+.categories {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+section.about {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.about .title {
+    text-align: left;
+}
+
+section.store {
+    align-items: center;
+    background: var(--mainGrey);
+    padding: 0 2rem 4rem 2rem;
+}
+
+.store .button {
+    margin-right: 3%;
+    margin-bottom: 1rem;
+}
+
+.x-large {
+    font-size: x-large;
+}
+
+.searchbox {
+    width: 40%;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 1rem
+}
+
+.searchbox span {
+    background-color: var(--pink);
+    padding: .375rem .75rem;
+}
+
+.searchbox input {
+    font-size: 1rem;
+    font-family: "Kaushan Script", cursive;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 10% 0 10%;
+}
+
+.item {
+    width: 24rem;
+    position: relative;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: var(--mainWhite);
+    background-clip: border-box;
+    border: 1px solid var(--borderColor);
+    border-radius: .25rem;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+.item .img-container {
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+}
+
+.img-container img {
+    width: inherit;
+    transition: 1s ease-in-out;
+    height: 100%;
+}
+
+.img-container:hover img {
+    transform: scale(1.3);
+    transition: 1s ease-in-out;
+}
+
+.img-container span {
+    width: 1.5rem;
+    position: absolute;
+    bottom: 2rem;
+    background: var(--mainYellow);
+    padding: 0.75rem;
+    border-radius: 1rem;
+    transition: 1s ease-in-out;
+    z-index: 1;
+}
+
+.img-container:hover {
+    overflow: visible;
+}
+
+.img-container:hover span {
+    transform: translate(-2.5em, -2.2em);
+    transition-timing-function: ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+.item .item-content {
+    background-color: var(--mainWhite);
+    color: var(--mainBlack);
+    padding: 1.25rem;
+    font-size: 1.25rem;
+    justify-content: space-between;
+    display: flex;
+    z-index: 2;
+}
+
+.item-content span {
+    margin-bottom: .5rem;
+}
+
+.basketContainer {
+    position: absolute;
+    top: 0;
+    right: -18rem;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 2rem 1.25rem;
+    background: var(--whiteTransparent);
+    transition: all 0.7s ease-in-out;
+}
+
+.basketContainer.open {
+    transform: rotateY(-360deg);
+    right: 0;
+}
+
+.basketItemContent {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.basketItemContent span:first-child {
+    font-weight: 700;
+}
+
+.basketItems {
+    width: 100%;
+}
+
+.basketItem {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.fa-trash {
+    color: var(--pink);
+    transition: all 0.8s ease-in-out;
+}
+
+.fa-trash:hover {
+    color: var(--mainBlack);
+    transition: all 0.8s ease-in-out;
+}
+
+.basketContainer .total {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1.25rem 0;
+}
+
+.basketItem img {
+    width: 3rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+.basketButtons {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.basketButtons .button {
+    margin: 1.25rem 0.5rem;
+}
+
+@media screen and (max-width: 992px) {
+    .navbarContainer .info {
+        display: none;
+    }
+    .navbar {
+        position: absolute;
+        left: 0;
+        top: 5rem;
+        z-index: 33;
+        background: var(--mainWhite);
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+        height: 6.25rem;
+        transition: height 0.5s;
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar a {
+        padding-bottom: 0.625rem;
+    }
+    .animate {
+        height: 0;
+    }
+    .collapseMenuIcon {
+        float: right;
+        display: block;
+        visibility: visible;
+    }
+    .basketContainer {
+        right: -18rem !important;
+    }
+}
