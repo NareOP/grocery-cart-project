@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="header">
+    <header class="header">
         <img src="./images/logo.svg" alt="" class="logo">
         <div class="navbarContainer">
             <div class="navbar">
@@ -33,63 +33,55 @@
         <span class="collapseMenuIcon" onclick="miniMenu()">
             <i class="fa fa-bars"></i>
         </span>
-    </div>
-    <section class="home">
-        <div class="basketContainer">
-            <div class="basketItems">
-            </div>
-            <div class="total">
-                <span>Total</span>
-                <span id="totalPriceBasket">$15</span>
-            </div>
-            <div class="basketButtons">
-                <div class="button">CLEAR CART</div>
-                <div class="button button-pink">CHECKOUT</div>
-            </div>
-        </div>
-        <div class="content">
-            <div class="whiteText title">Welcome To <span class="titleStar font-56">Grandma's</span>
-            </div>
-            <div class="button" style="font-size: x-large;">EXPLORE</div>
-        </div>
-    </section>
-    <section class="about">
-        <div class="about-content">
-            <div class="title">About <span class="titleStar font-56">Us</span>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aliquam voluptas beatae vitae expedita consectetur nesciunt quia deserunt asperiores facere fuga dicta fugiat corrupti et omnis porro at dolorum! Ad!</p>
-            <div class="button">EXPLORE</div>
-        </div>
-        <div class="box">
-            <img src="./images/sweets-1.jpeg" alt="">
-        </div>
-    </section>
-    <section class="store">
-        <div class="title">Our <span class="titleStar font-56">Store</span>
-        </div>
-        <div class="categories">
-            <div class="button">All</div>
-            <div class="button">Cakes</div>
-            <div class="button">Cupcakes</div>
-            <div class="button">Sweets</div>
-            <div class="button">Doughnuts</div>
-        </div>
-        <div class="searchbox">
-            <span><i class="fa fa-search"></i></span>
-            <input type="text" placeholder="items">
-        </div>
-        <div class="items">
-            <!-- <div class="item">
-                <div class="img-container">
-                    <img src="./images/cake-2.jpeg" alt="">
-                    <span><i class="fa fa-shopping-cart"></i></span>
+    </header>
+    <main>
+        <section class="home">
+            <div class="basketContainer">
+                <div class="basketItems">
                 </div>
-                <div class="item-content">
-                    <span>Sweet item</span> <span>$0</span>
+                <div class="total">
+                    <span>Total</span>
+                    <span id="totalPriceBasket">$15</span>
                 </div>
-            </div> -->
-        </div>
-    </section>
+                <div class="basketButtons">
+                    <button class="button">CLEAR CART</button>
+                    <button class="button button-pink">CHECKOUT</button>
+                </div>
+            </div>
+            <div class="content">
+                <div class="whiteText title">Welcome To <span class="titleStar font-56">Grandma's</span>
+                </div>
+                <button class="button" style="font-size: x-large;">EXPLORE</button>
+            </div>
+        </section>
+        <section class="about">
+            <div class="about-content">
+                <div class="title">About <span class="titleStar font-56">Us</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aliquam voluptas beatae vitae expedita consectetur nesciunt quia deserunt asperiores facere fuga dicta fugiat corrupti et omnis porro at dolorum! Ad!</p>
+                <button class="button">EXPLORE</button>
+            </div>
+            <div class="box">
+                <img src="./images/sweets-1.jpeg" alt="">
+            </div>
+        </section>
+        <section class="store">
+            <div class="title">Our <span class="titleStar font-56">Store</span>
+            </div>
+            <div class="categories">
+                <button class="button">All</button>
+                <button class="button">Cakes</button>
+                <button class="button">Cupcakes</button>
+                <button class="button">Sweets</button>
+                <button class="button">Doughnuts</button>
+            </div>
+            <div class="searchbox">
+                <span><i class="fa fa-search"></i></span>
+                <input type="text" placeholder="items">
+            </div>
+            <div class="items"></div>
+        </section>
+    </main>
 </body>
 
 </html>

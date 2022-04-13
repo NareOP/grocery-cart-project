@@ -70,18 +70,21 @@ window.addEventListener("load", function() {
         const icon = document.createElement("i");
         icon.classList = "fa fa-shopping-cart";
         imgSpan.appendChild(icon);
-        imgContainer.appendChild(img);
-        imgContainer.appendChild(imgSpan);
+        [img, imgSpan].map((elem) => {
+            imgContainer.appendChild(elem);
+        });
         const itemContent = document.createElement("div");
         itemContent.classList.add("item-content");
         const titleSpan = document.createElement("span");
         titleSpan.innerHTML = item.title;
         const priceSpan = document.createElement("span");
         priceSpan.innerHTML = "$" + item.price;
-        itemContent.appendChild(titleSpan);
-        itemContent.appendChild(priceSpan);
-        itemDiv.appendChild(imgContainer);
-        itemDiv.appendChild(itemContent);
+        [titleSpan, priceSpan].map((elem) => {
+            itemContent.appendChild(elem);
+        });
+        [imgContainer, itemContent].map((elem) => {
+            itemDiv.appendChild(elem);
+        });
         itemsContainer.appendChild(itemDiv);
 
         imgSpan.addEventListener("click", (e) => {
@@ -134,14 +137,15 @@ const addItemToBasket = (item) => {
     title.innerHTML = item.title;
     const price = document.createElement("span");
     price.innerHTML = "$" + item.price;
-    basketItemContent.appendChild(title);
-    basketItemContent.appendChild(price);
+    [title, price].map((elem) => {
+        basketItemContent.appendChild(elem);
+    });
     const trash = document.createElement("span");
     const trashIcon = document.createElement("i");
     trashIcon.classList = "fa fa-trash";
     trash.appendChild(trashIcon);
-    basketItem.appendChild(img);
-    basketItem.appendChild(basketItemContent);
-    basketItem.appendChild(trash);
+    [img, basketItemContent, trash].map(elem => {
+        basketItem.appendChild(elem);
+    });
     basketItems.appendChild(basketItem);
 };
