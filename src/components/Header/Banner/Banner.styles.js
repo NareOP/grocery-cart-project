@@ -50,6 +50,4 @@ const BasketInfo = styled.div`
   justify-content: center;
 `;
 
-const Elem = styled.span``;
-
 export { BannerContainer, BasketContainer, BasketItems, BasketInfo };

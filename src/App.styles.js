@@ -32,4 +32,4 @@ const GlobalStyles = () => {
   );
 };
 
-export { GlobalStyles };
+export default GlobalStyles;

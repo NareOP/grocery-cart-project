@@ -40,14 +40,14 @@ const Header = () => {
           <Contacts>
             <FontAwesomeIcon icon={faPhone} />+ 123 456 789
           </Contacts>
-          <BasketInfoButton onClick={() => setOpenBasket(!openBasket)}>
+          <BasketInfoButton onClick={() => setOpenBasket((prev) => !prev)}>
             <FontAwesomeIcon icon={faShoppingCart} />
             <span>
               {items.length}items - ${totalPrice}
             </span>
           </BasketInfoButton>
         </Nav>
-        <CollapseMenuIcon onClick={() => setToggleMenu(!toggleMenu)}>
+        <CollapseMenuIcon onClick={() => setToggleMenu((prev) => !prev)}>
           <FontAwesomeIcon
             icon={faBars}
             size='2x'
