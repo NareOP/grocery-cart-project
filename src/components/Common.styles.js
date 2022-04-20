@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 const Title = styled.span(
-  ({ color }) => `
+  ({ color = 'var(--mainBlack)' }) => `
   font-size: 2.5rem;
   text-transform: capitalize;
-  color: ${color || 'var(--mainBlack)'};
+  color: ${color};
   & span {
     color: var(--pink);
     font-size: 4rem;
@@ -43,23 +43,32 @@ const Center = styled.div`
   -webkit-transform: translate(-50%, -50%);
 `;
 
-const Section = styled.div`
+const Section = styled.div(
+  ({ margin = 0 }) => `
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   position: relative;
   overflow: hidden;
-`;
+  margin: ${margin};
+`
+);
 
 const HorizontalButtons = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  backgroun-color: red;
   & Button {
     margin: 1.25rem 0.5rem;
   }
 `;
 
-const Elem = styled.span``;
+const TextMuted = styled.p`
+  color: var(--mutedText);
+  width: 75%;
+`;
 
-export { Title, Button, Center, Section, HorizontalButtons };
+// const Elem = styled.span``;
+
+export { Title, Button, Center, Section, HorizontalButtons, TextMuted };

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import styles from './Banner.module.css';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import {
   Title,
   Button,
@@ -16,7 +16,7 @@ import {
 import backgroundImage from '../../../assets/images/headerBcg.jpeg';
 
 const Banner = ({ openBasket }) => {
-  const [totalPrice, setTotalPrice] = useState(0);
+  const [totalPrice] = useState(0);
   return (
     <Section>
       <BasketContainer show={openBasket}>
@@ -30,7 +30,7 @@ const Banner = ({ openBasket }) => {
       <BannerContainer image={backgroundImage}>
         <Center>
           <Title color='white'>
-            Welcome To <span>Grandma's</span>
+            Welcome To <span>Grandma&aposs</span>
           </Title>
           <Button size='larger'>explore</Button>
         </Center>
@@ -39,8 +39,12 @@ const Banner = ({ openBasket }) => {
   );
 };
 
-Banner.propTypes = {};
+Banner.propTypes = {
+  openBasket: PropTypes.bool,
+};
 
-Banner.defaultProps = {};
+Banner.defaultProps = {
+  openBasket: false,
+};
 
 export default Banner;

@@ -1,17 +1,43 @@
 import styled from 'styled-components';
 
-const AboutContent = styled.div`
+const AboutContainer = styled.div`
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
-  width: 100%;
   flex-wrap: wrap;
-  padding: 5% 0 5% 0;
+  justify-content: center;
+  padding: 3rem 0;
+
+  > div {
+    padding: 0 1rem;
+    margin: 3rem 0;
+    max-width: 33.3%;
+    min-width: 370px;
+  }
 `;
 
-const ImageBox = styled.div`
-  wdith: 70%;
-  & > img::before {
+const AboutContent = styled.div`
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  // align-content: start;
+  // height: 100%;
+  // // width: 34rem;
+  // // padding: 0 0.5rem
+  // // margin: 3rem 0;
+  // & p {
+  //   width: 75% !important;
+  // }
+`;
+
+const ImageBox = styled.div(
+  ({ image }) => `
+  position: relative;
+  background-image: url(${image});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &::before {
     content: '';
     position: absolute;
     top: -1.5rem;
@@ -22,6 +48,12 @@ const ImageBox = styled.div`
     z-index: -1;
     transition: all 1s ease-in-out;
   }
-`;
 
-export { AboutContent, ImageBox };
+  &:hover::before {
+    top: 0;
+    left: 0;
+  }
+`
+);
+
+export { AboutContainer, AboutContent, ImageBox };

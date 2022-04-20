@@ -14,6 +14,7 @@ const GlobalStyles = () => {
           --borderColor: #ffffff1f;
           --whiteTransparent: #ffffff80;
           --mainFontColor: #212529;
+          --mutedText: #6c757d;
         }
         * {
           margin: 0;

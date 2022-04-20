@@ -4,6 +4,7 @@ const BannerContainer = styled.div(
   ({ image }) => `
   background-image: url(${image});
   min-height: 100vh;
+  width: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

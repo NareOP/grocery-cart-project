@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import styles from './Header.module.css';
-import Banner from './Banner/Banner';
-import { css, jsx } from '@emotion/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faPhone,
+  faShoppingCart,
+  faBars,
+} from '@fortawesome/free-solid-svg-icons';
 import {
   Navbar,
   Nav,
@@ -12,18 +14,14 @@ import {
   BasketInfoButton,
   CollapseMenuIcon,
 } from './Header.styles';
-import {
-  faPhone,
-  faShoppingCart,
-  faBars,
-} from '@fortawesome/free-solid-svg-icons';
+import Banner from './Banner/Banner';
 import logo from '../../assets/images/logo.svg';
 
 const Header = () => {
   const menu = ['Home', 'About', 'Store'];
   const [toggleMenu, setToggleMenu] = useState(false);
   const [openBasket, setOpenBasket] = useState(false);
-  const [totalPrice, setTotalPrice] = useState(0);
+  const [totalPrice] = useState(0);
   const items = [];
 
   return (
