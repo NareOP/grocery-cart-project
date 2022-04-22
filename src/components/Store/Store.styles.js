@@ -24,6 +24,7 @@ const SearchBox = styled.div`
   flex-wrap: nowrap;
   justify-content: center;
   margin-bottom: 1rem;
+
   & svg {
     padding: 0.375rem 0.75rem;
     width: 1.5rem;
@@ -57,32 +58,41 @@ const Item = styled.div`
   margin: 1rem;
 `;
 
+const IconContainer = styled.span`
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  bottom: 1rem;
+  background: var(--mainYellow);
+  padding: 0.75rem;
+  border-radius: 1rem;
+  transition: 1s ease-in-out;
+  z-index: 1;
+
+  svg {
+    width: 1rem;
+  }
+`;
+
 const ItemImageContainer = styled.div`
   width: inherit;
   height: inherit;
-  overflow: hidden;
+
   img {
     width: inherit;
     transition: 1s ease-in-out;
     height: 100%;
   }
-  & svg {
-    width: 1.5rem;
-    position: absolute;
-    bottom: 2rem;
-    background: var(--mainYellow);
-    padding: 0.75rem;
-    border-radius: 1rem;
-    transition: 1s ease-in-out;
-    z-index: 1;
-  }
+
   &:hover {
     overflow: visible;
+
     img {
       transform: scale(1.3);
       transition: 1s ease-in-out;
     }
-    span {
+
+    ${IconContainer} {
       transform: translate(-2.5em, -2.2em);
       transition-timing-function: ease-in-out;
       transition: 1s ease-in-out;
@@ -98,9 +108,11 @@ const ItemContent = styled.div`
   justify-content: space-between;
   display: flex;
   z-index: 2;
+
   p {
-    word-spacing: 2rem;
     margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    text-transform: capitalize;
   }
 `;
 
@@ -112,4 +124,5 @@ export {
   Item,
   ItemImageContainer,
   ItemContent,
+  IconContainer,
 };

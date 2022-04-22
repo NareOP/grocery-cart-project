@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ItemsContext } from 'ItemsContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { Title, Button, HorizontalButtons } from 'components/Common.styles';
@@ -10,65 +11,18 @@ import {
   Item,
   ItemImageContainer,
   ItemContent,
+  IconContainer,
 } from './Store.styles';
 
 const Store = () => {
-  const items = [
-    {
-      id: 1,
-      image: './images/cake-1.jpeg',
-      title: 'Cake item',
-      price: 5,
-    },
-    {
-      id: 2,
-      image: './images/cake-2.jpeg',
-      title: 'Cake item',
-      price: 5,
-    },
-    {
-      id: 3,
-      image: './images/cake-3.jpeg',
-      title: 'Cake item',
-      price: 5,
-    },
-    {
-      id: 4,
-      image: './images/cupcake-1.jpeg',
-      title: 'Cupcake item',
-      price: 10,
-    },
-    {
-      id: 5,
-      image: './images/cupcake-2.jpeg',
-      title: 'Cupcake item',
-      price: 10,
-    },
-    {
-      id: 6,
-      image: './images/cupcake-3.jpeg',
-      title: 'Cupcake item',
-      price: 10,
-    },
-    {
-      id: 7,
-      image: './images/doughnut-1.jpeg',
-      title: 'Cupcake item',
-      price: 15,
-    },
-    {
-      id: 8,
-      image: './images/doughnut-2.jpeg',
-      title: 'Cupcake item',
-      price: 15,
-    },
-    {
-      id: 9,
-      image: './images/doughnut-3.jpeg',
-      title: 'Cupcake item',
-      price: 15,
-    },
-  ];
+  const items = JSON.parse(localStorage.getItem('items')) || [];
+  const { dispatch } = useContext(ItemsContext);
+  const addItemInBasket = (id) => {
+    alert('item added to the card');
+    const basketItem = items.find((i) => i.id === id);
+    dispatch(basketItem);
+  };
+
   return (
     <StoreContainer>
       <Title>
@@ -91,15 +45,19 @@ const Store = () => {
           <Item key={item.id}>
             <ItemImageContainer>
               <img
-                src={item.image}
                 alt={item.title}
+                src={item.image}
               />
-              <FontAwesomeIcon icon={faShoppingCart} />
+              <IconContainer>
+                <FontAwesomeIcon
+                  icon={faShoppingCart}
+                  onClick={() => addItemInBasket(item.id)}
+                />
+              </IconContainer>
             </ItemImageContainer>
             <ItemContent>
-              <p>
-                {item.title} ${item.price}
-              </p>
+              <span>{item.title}</span>
+              <span>${item.price}</span>
             </ItemContent>
           </Item>
         ))}

@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { ItemsContext } from 'ItemsContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faPhone,
   faShoppingCart,
   faBars,
 } from '@fortawesome/free-solid-svg-icons';
+import logo from 'assets/images/logo.svg';
 import {
   Navbar,
   Nav,
@@ -15,14 +17,12 @@ import {
   CollapseMenuIcon,
 } from './Header.styles';
 import Banner from './Banner/Banner';
-import logo from '../../assets/images/logo.svg';
 
 const Header = () => {
   const menu = ['Home', 'About', 'Store'];
   const [toggleMenu, setToggleMenu] = useState(false);
   const [openBasket, setOpenBasket] = useState(false);
-  const [totalPrice] = useState(0);
-  const items = [];
+  const { basketItems: items = [], totalPrice } = useContext(ItemsContext);
 
   return (
     <header>
@@ -55,7 +55,11 @@ const Header = () => {
           />
         </CollapseMenuIcon>
       </Navbar>
-      <Banner openBasket={openBasket} />
+      <Banner
+        openBasket={openBasket}
+        items={items}
+        totalPrice={totalPrice}
+      />
     </header>
   );
 };

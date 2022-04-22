@@ -5,6 +5,7 @@ const Title = styled.span(
   font-size: 2.5rem;
   text-transform: capitalize;
   color: ${color};
+
   & span {
     color: var(--pink);
     font-size: 4rem;
@@ -25,6 +26,7 @@ const Button = styled.button(
   font-size: ${size === 'larger' ? '1.5rem' : '1rem'};
   margin: 1.25rem 0;
   background: transparent;
+
   &:hover {
     color: ${pink ? 'var(--mainBlack)' : 'var(--pink)'};
     background-color: ${pink ? 'var(--pink)' : 'var(--mainBlack)'};
@@ -58,7 +60,7 @@ const HorizontalButtons = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  backgroun-color: red;
+
   & Button {
     margin: 1.25rem 0.5rem;
   }
@@ -68,7 +70,5 @@ const TextMuted = styled.p`
   color: var(--mutedText);
   width: 75%;
 `;
-
-// const Elem = styled.span``;
 
 export { Title, Button, Center, Section, HorizontalButtons, TextMuted };

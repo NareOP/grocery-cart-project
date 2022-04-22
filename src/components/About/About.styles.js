@@ -13,20 +13,22 @@ const AboutContainer = styled.div`
     max-width: 33.3%;
     min-width: 370px;
   }
+
+  @media screen and (max-width: 24rem) {
+    padding: 0;
+  }
 `;
 
 const AboutContent = styled.div`
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
-  // align-content: start;
-  // height: 100%;
-  // // width: 34rem;
-  // // padding: 0 0.5rem
-  // // margin: 3rem 0;
-  // & p {
-  //   width: 75% !important;
-  // }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: start;
+  height: 100%;
+
+  & p {
+    width: 75% !important;
+  }
 `;
 
 const ImageBox = styled.div(
@@ -36,6 +38,7 @@ const ImageBox = styled.div(
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 20rem;
 
   &::before {
     content: '';
@@ -52,6 +55,11 @@ const ImageBox = styled.div(
   &:hover::before {
     top: 0;
     left: 0;
+  }
+
+  @media screen and (max-width: 24rem) {
+    min-height: 17.5rem !important;
+    min-width: 17rem !important;
   }
 `
 );

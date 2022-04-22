@@ -10,12 +10,13 @@ const BannerContainer = styled.div(
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+
   &::before {
-      content: '';
-      position: absolute;
-      background-color: var(--yellowTrans);
-      height: 100%;
-      width: 100%;
+    content: '';
+    position: absolute;
+    background-color: var(--yellowTrans);
+    height: 100%;
+    width: 100%;
   }
 `
 );
@@ -33,14 +34,13 @@ const BasketContainer = styled.div(
   padding: 2rem 1.25rem;
   background: var(--whiteTransparent);
   transition: all 0.7s ease-in-out;
+
   @media screen and (max-width: 992px) {
     right: -18rem !important;
     justify-content: space-between;
   }
 `
 );
-
-const BasketItems = styled.div``;
 
 const BasketInfo = styled.div`
   width: 100%;
@@ -50,4 +50,58 @@ const BasketInfo = styled.div`
   justify-content: center;
 `;
 
-export { BannerContainer, BasketContainer, BasketItems, BasketInfo };
+const BasketItems = styled.div`
+  width: 100%;
+`;
+
+const BasketItem = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+
+  img {
+    width: 3rem;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  @media screen and (max-width: 992px) {
+    right: -18rem !important;
+    justify-content: space-between;
+  }
+
+  svg path {
+    color: var(--pink);
+    transition: all 0.8s ease-in-out;
+
+    &:hover {
+      color: var(--mainBlack);
+      transition: all 0.8s ease-in-out;
+    }
+  }
+`;
+
+const BasketItemContent = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+
+  span:first-child {
+    font-weight: 700;
+  }
+`;
+
+export {
+  BannerContainer,
+  BasketContainer,
+  BasketItems,
+  BasketInfo,
+  BasketItem,
+  BasketItemContent,
+};

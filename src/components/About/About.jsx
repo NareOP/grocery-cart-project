@@ -1,7 +1,6 @@
 import React from 'react';
+import { Title, Button, TextMuted } from 'components/Common.styles';
 import { AboutContainer, AboutContent, ImageBox } from './About.styles';
-import { Title, Button, TextMuted } from '../Common.styles';
-import sweetImage from '../../assets/images/sweets-1.jpeg';
 
 const About = () => (
   <AboutContainer>
@@ -17,7 +16,7 @@ const About = () => (
       </TextMuted>
       <Button>explore</Button>
     </AboutContent>
-    <ImageBox image={sweetImage} />
+    <ImageBox image='https://js-beginners.github.io/grocery-cart-project/img/sweets-1.jpeg' />
   </AboutContainer>
 );
 

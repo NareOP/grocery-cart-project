@@ -26,5 +26,12 @@
         "unnamedComponents": "function-expression"
       }
     ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
   }
 }
